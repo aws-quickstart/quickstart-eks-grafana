@@ -17,7 +17,7 @@
 //links
 :launch_new_vpc: https://fwd.aws/QwWdd
 :launch_existing_vpc: https://fwd.aws/DjnpQ
-:launch_existing_cluster: https://fwd.aws/A7REg
+:launch_existing_cluster: https://fwd.aws/pDng5
 :template_new_vpc: https://fwd.aws/DgqPB
 :template_existing_vpc: https://fwd.aws/mbD5g
 :template_existing_cluster: https://fwd.aws/rxnDe
