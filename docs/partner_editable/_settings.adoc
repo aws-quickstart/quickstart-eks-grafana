@@ -6,7 +6,7 @@
 :partner-product-short-name: Grafana
 // If there's no partner, comment partner-company-name and partner-contributors.
 //:partner-company-name: Example Company Name, Ltd.
-:doc-month: March
+:doc-month: April
 :doc-year: 2021
 :deployment_time: 45-60 minutes
 //:partner-contributors: Shuai Ye, Michael McConnell, and John Smith, {partner-company-name}
