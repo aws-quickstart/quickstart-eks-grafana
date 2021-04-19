@@ -11,11 +11,11 @@ Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
       - Label:
-          default: Prometheus for Amazon EKS configuration
+          default: Grafana for Amazon EKS configuration
         Parameters:
           - KubeClusterName
           - Namespace
-          - PrometheusURL
+          - GrafanaURL
           - OverrideValues
     ParameterLabels:
       KubeClusterName:
@@ -24,8 +24,8 @@ Metadata:
         default: Override values
       Namespace:
         default: Namespace
-      PrometheusURL:
-        default: Prometheus URL
+      GrafanaURL:
+        default: Grafana URL
 Parameters:
   KubeClusterName:
     Type: String
@@ -38,10 +38,10 @@ Parameters:
     Type: String
     Default: grafana
     Description: (Optional) Kubernetes namespace to deploy Grafana into.
-  PrometheusURL:
+  GrafanaURL:
     Type: String
-    Default: http://prometheus-server.prometheus.svc.cluster.local
-    Description: (Optional) URL for Prometheus. Defaults to the in-cluster Prometheus deployed into the Prometheus namespace.
+    Default: http://grafana-server.grafana.svc.cluster.local
+    Description: (Optional) URL for Grafana. Defaults to the in-cluster Grafana deployed into the Grafana namespace.
 Conditions:
   SupplyOverrides: !Not [!Equals [!Ref OverrideValues, '']]
 Resources:
@@ -76,9 +76,9 @@ Resources:
           datasources.yaml:
             apiVersion: 1
             datasources:
-            - name: Prometheus
-              type: prometheus
-              url: ${PrometheusURL}
+            - name: Grafana
+              type: grafana
+              url: ${GrafanaURL}
               access: proxy
               isDefault: true
         dashboardProviders:
@@ -98,11 +98,11 @@ Resources:
             node-exporter:
               gnetId: 1860
               revision: 21
-              datasource: Prometheus
+              datasource: Grafana
             cluster:
               gnetId: 8685
               revision: 1
-              datasource: Prometheus
+              datasource: Grafana
 Outputs:
   GrafanaReleaseName:
     Value: !GetAtt GrafanaHelmChart.Name
