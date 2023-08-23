@@ -1,3 +1,0 @@
-
-=== Launch into an existing Amazon EKS cluster
-include::eks-grafana.template.adoc[]

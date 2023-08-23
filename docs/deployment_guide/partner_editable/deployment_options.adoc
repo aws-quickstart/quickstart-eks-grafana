@@ -1,0 +1,9 @@
+// Edit this placeholder text as necessary to describe the deployment options.
+
+This Partner Solution provides the following deployment options:
+
+* https://fwd.aws/QwWdd?[Deploy {partner-product-short-name} into a new VPC^].
+* https://fwd.aws/DjnpQ?[Deploy {partner-product-short-name} into an existing VPC and new EKS cluster^].
+* https://fwd.aws/pDng5?[Deploy {partner-product-short-name} into an existing VPC and new EKS cluster^]
+
+This Partner Solution provides separate templates for these options. It also lets you configure Classless Inter-Domain Routing (CIDR) blocks and {partner-product-short-name} settings.

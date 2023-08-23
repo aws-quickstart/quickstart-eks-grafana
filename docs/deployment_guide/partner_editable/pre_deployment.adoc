@@ -1,0 +1,7 @@
+//Include any predeployment steps here, such as signing up for a Marketplace AMI or making any changes to a partner account. If there are no predeployment steps, leave this file empty.
+
+== Predeployment steps
+
+=== (Optional) Amazon EKS cluster
+
+If you deploy your cluster into an existing Amazon EKS cluster that was not created by the Amazon EKS on the AWS Cloud Partner Solution, you must configure your cluster to allow this Partner Solution to manage it. For more information, see the Deployment steps section.

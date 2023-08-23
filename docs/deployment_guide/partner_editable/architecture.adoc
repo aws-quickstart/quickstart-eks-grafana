@@ -1,0 +1,15 @@
+:xrefstyle: short
+
+Deploying this Partner Solution with default parameters builds the following {partner-product-short-name} environment in the
+AWS Cloud.
+
+// Replace this example diagram with your own. Follow our wiki guidelines: https://w.amazon.com/bin/view/AWS_Quick_Starts/Process_for_PSAs/#HPrepareyourarchitecturediagram. Upload your source PowerPoint file to the GitHub {deployment name}/docs/images/ directory in its repository.
+
+[#architecture1]
+.Partner Solution architecture for {partner-product-short-name} on AWS
+image::../docs/deployment_guide/images/architecture_diagram.png[Architecture]
+
+* A Kubernetes namespace for Grafana.
+* A Classic Load Balancer to route traffic to the Grafana pod.
+* A Grafana deployment containing a single pod.
+* An Amazon Elastic Block Store (Amazon EBS) volume.
